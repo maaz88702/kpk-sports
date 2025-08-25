@@ -1,0 +1,153 @@
+/* Hero Section */
+.hero {
+    background: url('images/stadium.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.hero-overlay {
+    background: rgba(0,0,0,0.6);
+    padding: 50px;
+    border-radius: 15px;
+}
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+.feature-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.feature-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s;
+}
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+.feature-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
+.about h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #0d6efd;
+}
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Header / Navbar */
+header {
+    background: #0d6efd;
+    color: #fff;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Nav Links */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    font-weight: 500;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: #ffcc00;
+    color: #000;
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #0d6efd;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        text-align: right;
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
